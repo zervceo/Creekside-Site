@@ -169,4 +169,14 @@ collections:
             widget: object
             fields:
               - { name: ga4_id, label: "Google Analytics 4 ID (G-XXXXXXX)", widget: string, required: false }
+          - name: management
+            label: "Management company (footer line)"
+            widget: object
+            fields:
+              - { name: name, label: "Company name (clear to hide the footer line)", widget: string, required: false }
+              - { name: po_box, label: "PO Box / mailing line", widget: string, required: false }
+              - { name: city, label: "City", widget: string, required: false }
+              - { name: state, label: "State", widget: string, required: false }
+              - { name: zip, label: "ZIP", widget: string, required: false }
+              - { name: phone, label: "Office phone", widget: string, required: false }
           - { name: preview_notice, label: "Preview notice in footer (clear at launch)", widget: string, required: false }

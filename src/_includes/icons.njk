@@ -22,15 +22,12 @@
 </svg>
 {%- endmacro -%}
 
-{%- macro logo() -%}
-<svg class="logo__mark" viewBox="0 0 48 52" aria-hidden="true" focusable="false">
-  <path fill="currentColor" d="M20 3h8v3.5h-8zM22 6.5h4V10h-4z"/>
-  <path fill="currentColor" d="M24 9c8 0 11 6 11.5 14 .4 7 2 12 6.5 17v3H6v-3c4.5-5 6.1-10 6.5-17C13 15 16 9 24 9z"/>
-  <path fill="currentColor" d="M19 45h10a5 5 0 0 1-10 0z"/>
-  <circle cx="15" cy="38" r="9" fill="#fff" stroke="currentColor" stroke-width="1.8"/>
-  <g fill="currentColor"><circle cx="12" cy="35" r=".9"/><circle cx="16" cy="34" r=".9"/><circle cx="19.5" cy="37" r=".9"/><circle cx="14" cy="38.5" r=".9"/><circle cx="10.5" cy="39.5" r=".9"/><circle cx="17.5" cy="41.5" r=".9"/><circle cx="13.5" cy="42.5" r=".9"/></g>
-</svg>
-<span class="logo__text"><span class="logo__name">Creekside</span><span class="logo__tag">Golf <i>•</i> Food <i>•</i> Fun</span></span>
+{%- macro logo(light=false) -%}
+{%- if light -%}
+<img class="logo__img logo__img--stacked" src="/assets/img/logo-stacked-white.webp" alt="" width="360" height="235">
+{%- else -%}
+<img class="logo__img" src="/assets/img/logo-lockup.webp" alt="" width="520" height="147">
+{%- endif -%}
 {%- endmacro -%}
 
 {%- macro btn(label, url, style="primary", track="") -%}
@@ -48,8 +45,8 @@
 </div>
 {%- endmacro -%}
 
-{%- macro pagehero(eyebrow, title, lead, script, img, alt) -%}
-<section class="pagehero">
+{%- macro pagehero(eyebrow, title, lead, script, img, alt, variant="") -%}
+<section class="pagehero{% if variant %} pagehero--{{ variant }}{% endif %}">
   <img class="pagehero__img" src="/assets/img/{{ img }}.webp" alt="{{ alt }}" fetchpriority="high">
   <div class="pagehero__inner wrap">
     <p class="eyebrow eyebrow--light">{{ eyebrow }}</p>
