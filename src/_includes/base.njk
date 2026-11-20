@@ -19,6 +19,8 @@
   {% if noindex %}<meta name="robots" content="noindex">
   {% endif %}<meta name="theme-color" content="#0f2a47">
   <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/img/favicon.png" type="image/png" sizes="128x128">
+  <link rel="apple-touch-icon" href="/assets/img/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Sacramento&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
@@ -29,6 +31,7 @@
     "@type": ["GolfCourse", "LocalBusiness"],
     "name": {{ site.name | json | safe }},
     "slogan": "Golf. Food. Fun.",
+    "logo": {{ '/assets/img/logo-stacked.webp' | absolute(site.url) | json | safe }},
     "description": {{ site.description | json | safe }},
     "url": {{ site.url | json | safe }},
     "telephone": {{ site.phone | json | safe }},
@@ -85,7 +88,7 @@
   <footer class="footer">
     <div class="wrap footer__grid">
       <div class="footer__brand">
-        <a class="logo logo--light" href="/" aria-label="Creekside home">{{ logo() }}</a>
+        <a class="logo logo--light" href="/" aria-label="Creekside home">{{ logo(true) }}</a>
         <p>Your game. Your people. Your kind of place.</p>
         <p class="script script--light">All are welcome.</p>
       </div>
@@ -122,6 +125,9 @@
     </div>
     <div class="wrap footer__base">
       <p>© {% year %} {{ site.name }}. Good golf. Good food. Good people. Brighter days.</p>
+      {%- if site.management.name %}
+      <p class="footer__mgmt">Managed by {{ site.management.name }} · {{ site.management.po_box }}, {{ site.management.city }}, {{ site.management.state }} {{ site.management.zip }} · {{ site.management.phone }}</p>
+      {%- endif %}
       {% if site.preview_notice %}<p class="footer__preview">{{ site.preview_notice }}</p>{% endif %}
     </div>
   </footer>

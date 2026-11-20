@@ -1,6 +1,6 @@
 {
   "name": "Creekside",
-  "tagline": "Golf • Food • Fun",
+  "tagline": "Golf \u2022 Food \u2022 Fun",
   "url": "https://www.example.com",
   "description": "Toptracer bays, mini golf, lessons, food and events. Creekside is your game, your people, your kind of place.",
   "booking_url": "/bays/#rent",
@@ -23,5 +23,13 @@
   "analytics": {
     "ga4_id": ""
   },
-  "preview_notice": "Preview build: hours, pricing, menu, contact details and photography are placeholders awaiting final content."
+  "preview_notice": "Preview build: hours, pricing, menu, contact details and photography are placeholders awaiting final content.",
+  "management": {
+    "name": "Hospitality Management Corp",
+    "po_box": "PO Box 448",
+    "city": "Abbottstown",
+    "state": "PA",
+    "zip": "17301",
+    "phone": "717.259.0295"
+  }
 }
