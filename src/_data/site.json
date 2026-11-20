@@ -6,15 +6,15 @@
   "booking_url": "/bays/#rent",
   "lesson_url": "/lessons/#book",
   "order_url": "/food/#order",
-  "phone": "(555) 555-0199",
+  "phone": "(717) 691-5335",
   "email": "hello@example.com",
   "events_email": "events@example.com",
   "address": {
-    "street": "123 Creekside Drive",
-    "city": "Your Town",
+    "street": "3804 Lisburn Road",
+    "city": "Mechanicsburg",
     "state": "PA",
-    "zip": "00000",
-    "map_url": "https://maps.google.com/?q=Creekside+Golf"
+    "zip": "17055",
+    "map_url": "https://maps.google.com/?q=3804+Lisburn+Road+Mechanicsburg+PA+17055"
   },
   "social": {
     "facebook": "",

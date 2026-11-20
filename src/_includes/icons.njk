@@ -45,8 +45,8 @@
 </div>
 {%- endmacro -%}
 
-{%- macro pagehero(eyebrow, title, lead, script, img, alt) -%}
-<section class="pagehero">
+{%- macro pagehero(eyebrow, title, lead, script, img, alt, variant="") -%}
+<section class="pagehero{% if variant %} pagehero--{{ variant }}{% endif %}">
   <img class="pagehero__img" src="/assets/img/{{ img }}.webp" alt="{{ alt }}" fetchpriority="high">
   <div class="pagehero__inner wrap">
     <p class="eyebrow eyebrow--light">{{ eyebrow }}</p>
